@@ -1,5 +1,5 @@
-
-let inquirer = require('inquirer');
+const inquirer = require('inquirer');
+const api = require('./utils/api');
 
 const questions = [
     {
@@ -59,6 +59,9 @@ function init() {
         .prompt(questions)
         .then(answers => {
             console.log(answers);
+            const username = answers.username
+            console.log(username);
+            api.getUser(username);
             // Use user feedback for... whatever!!
         });
 
