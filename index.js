@@ -25,10 +25,9 @@ function writeToFile(fileName, data) {
 function init() {
 
     inquirer
-        .prompt([
-            /* Pass your questions in here */
-        ])
+        .prompt(questions)
         .then(answers => {
+            console.log(answers);
             // Use user feedback for... whatever!!
         });
 
