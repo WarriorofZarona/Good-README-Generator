@@ -14,9 +14,40 @@ const questions = [
     },
     {
         type: "input",
-        message: "What is your project description?",
+        message: "Enter a short project description: ",
         name: "description"
     },
+    {
+        type: "input",
+        message: "Enter the installation process: ",
+        name: "installation"
+    },
+    {
+        type: "input",
+        message: "Enter the usage of the project: ",
+        name: "usage"
+
+    },
+    {
+        type: "input",
+        message: "Enter licenses used for the project: ",
+        name: "licenses"
+    },
+    {
+        type: "confirm",
+        message: "Will other developers contribute to this project?",
+        name: "contribute"
+
+    }, {
+        type: "input",
+        message: "Enter any tests you are running for your project: ",
+        name: "tests"
+    },
+    {
+        type: "input",
+        message: "Enter your e-mail: ",
+        name: "email"
+    }
 ];
 
 function writeToFile(fileName, data) {
