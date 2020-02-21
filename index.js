@@ -43,11 +43,6 @@ const questions = [
         message: "Enter any tests you are running for your project: ",
         name: "tests"
     },
-    {
-        type: "input",
-        message: "Enter your e-mail: ",
-        name: "email"
-    }
 ];
 
 function writeToFile(fileName, data) {
@@ -59,8 +54,14 @@ function init() {
         .prompt(questions)
         .then(answers => {
             console.log(answers);
-            const username = answers.username
-            console.log(username);
+            const username = answers.username;
+            const title = answers.title;
+            const description = answers.description;
+            const installation = answers.installation;
+            const usage = answers.usage;
+            const licenses = answers.licenses;
+            const contribute = answers.contribute;
+            const tests = answers.tests;
             api.getUser(username);
             // Use user feedback for... whatever!!
         });
