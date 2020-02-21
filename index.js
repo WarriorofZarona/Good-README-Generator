@@ -1,10 +1,22 @@
+
+let inquirer = require('inquirer');
+
 const questions = [
-    "What is your Github username?",
-    "What is your Project title?",
-    "What is your project description?",
-    "What are the Table of contents?",
-
-
+    {
+        type: "input",
+        message: "Enter your Github username: ",
+        name: "username"
+    },
+    {
+        type: "input",
+        message: "Enter your project title: ",
+        name: "title"
+    },
+    {
+        type: "input",
+        message: "What is your project description?",
+        name: "description"
+    },
 ];
 
 function writeToFile(fileName, data) {
@@ -12,7 +24,6 @@ function writeToFile(fileName, data) {
 
 function init() {
 
-    var inquirer = require('inquirer');
     inquirer
         .prompt([
             /* Pass your questions in here */
