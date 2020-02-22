@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const api = require('./utils/api');
+const markdown = require('./utils/generateMarkdown');
 
 const questions = [
     {
@@ -46,6 +47,9 @@ const questions = [
 ];
 
 function writeToFile(fileName, data) {
+
+
+
 }
 
 function init() {
@@ -54,6 +58,9 @@ function init() {
         .prompt(questions)
         .then(answers => {
             console.log(answers);
+
+            markdown.generateMarkdown(answer);
+
             const username = answers.username;
             const title = answers.title;
             const description = answers.description;
@@ -70,3 +77,4 @@ function init() {
 }
 
 init();
+writeToFile();
