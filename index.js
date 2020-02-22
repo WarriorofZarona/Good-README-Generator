@@ -59,7 +59,7 @@ function init() {
         .then(answers => {
             console.log(answers);
 
-            markdown.generateMarkdown(answer);
+            // markdown.generateMarkdown(answers);
 
             const username = answers.username;
             const title = answers.title;
