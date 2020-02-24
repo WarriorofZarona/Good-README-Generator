@@ -1,6 +1,6 @@
 
 # Good README Generator ![GitHub package.json version](https://img.shields.io/github/package-json/v/WarriorofZarona/Good-README-Generator)
-A user is prompted for their github username and a series of questions. The answers populate a README for use in future projects.
+A user is prompted for their github username and asked a series of questions. The answers populate a README file to be used in future projects.
 
 # Tables of Contents
 * [Installation](#installation)
@@ -12,21 +12,21 @@ A user is prompted for their github username and a series of questions. The answ
 * [Credits](#credits)
 
 # Installation
-Type npm install to install necessary dependencies like axios, dotenv, and inquirer.
+Typed npm install in node to install necessary dependencies such as axios, dotenv, and inquirer.
 
 # Usage
-Quickly generate READMEs for future projects.
+Quickly create README files for projects.
 
 # License
-No licenses used for this project.
+No licenses used for the project.
 
 
 
 # Contributing
-undefined
+No contributing information used for the project.
 
 # Tests
-Ran node index.js in root directory to ensure README file was generated.
+Ran node index.js in root directory to ensure that README file is generated correctly
 
 # Questions
 ![Profile Avatar](https://avatars0.githubusercontent.com/u/56315576?v=4)
@@ -36,7 +36,7 @@ If you have any questions, please e-mail me at E-mail: andrewbautista85@gmail.co
 
 # Credits
 
-Github: [warriorofzarona](https://api.github.com/users/WarriorofZarona)
+Github: [WarriorofZarona](https://api.github.com/users/WarriorofZarona)
 Copyright Andrew Bautista. All Rights Reserved.
 
 
