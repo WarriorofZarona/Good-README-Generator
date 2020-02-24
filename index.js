@@ -89,7 +89,7 @@ async function init() {
                 console.log(data);
                 const final = markdown(data)
                 console.log(final);
-                writeToFile("./output/README.md", final);
+                writeToFile("README.md", final);
             })
                 .catch(err => {
                     console.log('err ', err);
