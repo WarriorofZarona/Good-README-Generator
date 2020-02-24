@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const fs = require('fs');
 const api = require('./utils/api');
 const markdown = require('./utils/generateMarkdown');
 const util = require("util");
@@ -50,14 +51,20 @@ const questions = [
     },
 ];
 
-function writeToFile(fileName, data) {
+async function writeToFile(fileName, data) {
 
 
+    writeFileAsync(fileName, data).then(function () {
+        console.log("Successfully wrote README!");
+
+    }).catch(err => {
+        console.log('err ', err);
+    })
 }
 
-function init() {
+async function init() {
 
-    inquirer
+    await inquirer
         .prompt(questions)
         .then(answers => {
             console.log(answers);
@@ -77,7 +84,9 @@ function init() {
                     pfp: res.avatar_url
                 }
                 console.log(data);
-                markdown(data)
+                const final = markdown(data)
+                console.log(final);
+                writeToFile("./output/README.md", final);
             })
                 .catch(err => {
                     console.log('err ', err);
@@ -88,4 +97,3 @@ function init() {
 }
 
 init();
-writeToFile();
