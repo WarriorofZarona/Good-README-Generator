@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 const api = require('./utils/api');
 const markdown = require('./utils/generateMarkdown');
 
+
 const questions = [
     {
         type: "input",
@@ -49,7 +50,6 @@ const questions = [
 function writeToFile(fileName, data) {
 
 
-
 }
 
 function init() {
@@ -58,18 +58,23 @@ function init() {
         .prompt(questions)
         .then(answers => {
             console.log(answers);
-
-            // markdown.generateMarkdown(answers);
-
-            const username = answers.username;
-            const title = answers.title;
-            const description = answers.description;
-            const installation = answers.installation;
-            const usage = answers.usage;
-            const licenses = answers.licenses;
-            const contribute = answers.contribute;
-            const tests = answers.tests;
-            api.getUser(username);
+            const apiData = api.getUser(answers.username);
+            apiData.then(res => {
+                console.log(res);
+                const data =
+                {
+                    username: answers.username,
+                    title: answers.title,
+                    description: answers.description,
+                    installation: answers.installation,
+                    usages: answers.usage,
+                    licenses: answers.licenses,
+                    tests: answers.tests,
+                    email: res.email,
+                    pfp: res.avatar_url
+                }
+                console.log(data);
+            })
             // Use user feedback for... whatever!!
         });
 
