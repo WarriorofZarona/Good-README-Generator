@@ -48,7 +48,7 @@ const questions = [
         type: "input",
         message: "Enter any tests you are running for your project: ",
         name: "tests"
-    },
+    }
 ];
 
 async function writeToFile(fileName, data) {
@@ -73,13 +73,16 @@ async function init() {
                 console.log(res);
                 const data =
                 {
+                    name: res.name,
                     username: answers.username,
+                    url: res.url,
                     title: answers.title,
                     description: answers.description,
                     installation: answers.installation,
                     usages: answers.usage,
                     licenses: answers.licenses,
                     tests: answers.tests,
+                    contributing: answers.contributing,
                     email: res.email,
                     pfp: res.avatar_url
                 }

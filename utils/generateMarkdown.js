@@ -8,25 +8,21 @@ function generateMarkdown(data) {
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
-* [Credits](#credits)
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
+* [Credits](#credits)
 
 # Installation
 ${data.installation}
 
 # Usage
-${data.usage}
+${data.usages}
 
 # License
 ${data.licenses}
 
-# Credits
-![Profile Avatar](${data.pfp})
 
-Github username: ${data.username}
-E-mail: $(data.email)
 
 # Contributing
 ${data.contributing}
@@ -35,7 +31,16 @@ ${data.contributing}
 ${data.tests}
 
 # Questions
-${data.questions}
+![Profile Avatar](${data.pfp})
+
+If you have any questions, please e-mail me at E-mail: $(data.email).
+
+
+# Credits
+
+Github: [${data.username}](${data.url})
+Copyright ${data.name}. All Rights Reserved.
+
 
 `;
 }
