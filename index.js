@@ -67,10 +67,8 @@ async function init() {
     await inquirer
         .prompt(questions)
         .then(answers => {
-            console.log(answers);
             const apiData = api.getUser(answers.username);
             apiData.then(res => {
-                console.log(res);
                 const data =
                 {
                     name: res.name,
@@ -86,9 +84,7 @@ async function init() {
                     email: res.email,
                     pfp: res.avatar_url
                 }
-                console.log(data);
                 const final = markdown(data)
-                console.log(final);
                 writeToFile("README.md", final);
             })
                 .catch(err => {
