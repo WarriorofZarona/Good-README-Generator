@@ -80,7 +80,7 @@ async function init() {
                     usages: answers.usage,
                     licenses: answers.licenses,
                     tests: answers.tests,
-                    contributing: answers.contribute,
+                    contribute: answers.contribute,
                     email: res.email,
                     pfp: res.avatar_url
                 }
