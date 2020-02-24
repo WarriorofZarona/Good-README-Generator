@@ -24,6 +24,7 @@ ${data.licenses}
 
 # Credits
 ![Profile Avatar](${data.pfp})
+
 Github username: ${data.username}
 E-mail: $(data.email)
 
