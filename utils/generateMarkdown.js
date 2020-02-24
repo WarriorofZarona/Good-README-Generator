@@ -24,7 +24,7 @@ ${data.licenses}
 
 
 # Contributing
-${data.contributing}
+${data.contribute}
 
 # Tests
 ${data.tests}
