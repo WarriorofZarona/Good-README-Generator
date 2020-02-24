@@ -33,7 +33,7 @@ ${data.tests}
 # Questions
 ![Profile Avatar](${data.pfp})
 
-If you have any questions, please e-mail me at E-mail: $(data.email).
+If you have any questions, please e-mail me at E-mail: ${data.email}.
 
 
 # Credits
