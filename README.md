@@ -1,7 +1,7 @@
 
 # Good README Generator ![GitHub package.json version](https://img.shields.io/github/package-json/v/WarriorofZarona/Good-README-Generator)
 
-# A user is prompted for his username and is asked questions which will populate a README to be used for future projects
+## A user is prompted for his github username and is asked questions, the answers populate a README for future projects
 
 # Tables of Contents
 * [Installation](#installation)
@@ -13,10 +13,10 @@
 * [Credits](#credits)
 
 # Installation
-Type npm install and the package will install necessary dependencies
+Type npm install to add all necessary dependencies
 
 # Usage
-Quickly create READMEs for projects
+Quickly create a README for projects
 
 # License
 No license
@@ -27,7 +27,7 @@ No license
 undefined
 
 # Tests
-Ran node index.js to ensure it generates the README file correctly
+Ran node index.js to ensure file is generating correctly
 
 # Questions
 ![Profile Avatar](https://avatars0.githubusercontent.com/u/56315576?v=4)
