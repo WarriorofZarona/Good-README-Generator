@@ -2,7 +2,6 @@ const inquirer = require('inquirer');
 const api = require('./utils/api');
 const markdown = require('./utils/generateMarkdown');
 
-
 const questions = [
     {
         type: "input",
@@ -36,8 +35,8 @@ const questions = [
         name: "licenses"
     },
     {
-        type: "confirm",
-        message: "Will other developers contribute to this project?",
+        type: "input",
+        message: "Enter contributing information: ",
         name: "contribute"
 
     }, {
@@ -74,8 +73,12 @@ function init() {
                     pfp: res.avatar_url
                 }
                 console.log(data);
+                markdown(data)
+
             })
-            // Use user feedback for... whatever!!
+                .catch(err => {
+                    console.log('err ', err);
+                })
         });
 
 
