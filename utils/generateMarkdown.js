@@ -1,6 +1,6 @@
 function generateMarkdown(data) {
   return `
-# ${data.title}
+# ${data.title} ![GitHub package.json version](https://img.shields.io/github/package-json/v/WarriorofZarona/Good-README-Generator)
 
 # ${data.description}
 
