@@ -1,6 +1,10 @@
 const inquirer = require('inquirer');
 const api = require('./utils/api');
 const markdown = require('./utils/generateMarkdown');
+const util = require("util");
+
+const readFileAsync = util.promisify(fs.readFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
 const questions = [
     {
@@ -74,7 +78,6 @@ function init() {
                 }
                 console.log(data);
                 markdown(data)
-
             })
                 .catch(err => {
                     console.log('err ', err);
