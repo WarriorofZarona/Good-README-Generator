@@ -59,7 +59,8 @@ async function init() {
     await inquirer
         .prompt(questions)
         .then(answers => {
-            const apiData = api.getUser(answers.username);
+            const userName = answers.username;
+            const apiData = api.getUser(userName);
             apiData.then(res => {
                 const data =
                 {
