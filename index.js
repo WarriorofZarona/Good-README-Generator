@@ -3,10 +3,7 @@ const fs = require('fs');
 const api = require('./utils/api');
 const markdown = require('./utils/generateMarkdown');
 const util = require("util");
-
-const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
-
 const questions = [
     {
         type: "input",
@@ -50,18 +47,13 @@ const questions = [
         name: "tests"
     }
 ];
-
 async function writeToFile(fileName, data) {
-
-
     writeFileAsync(fileName, data).then(function () {
         console.log("Successfully wrote README!");
-
     }).catch(err => {
         console.log('err ', err);
-    })
-}
-
+    });
+};
 async function init() {
 
     await inquirer
@@ -89,10 +81,10 @@ async function init() {
             })
                 .catch(err => {
                     console.log('err ', err);
-                })
+                });
         });
 
 
-}
+};
 
 init();

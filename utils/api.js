@@ -1,10 +1,7 @@
 const axios = require('axios');
 const dotenv = require('dotenv').config();
-
-
 const api = {
   getUser(username) {
-
     return axios({
       url: `https://api.github.com/users/${username}`,
       method: "get",
@@ -15,12 +12,10 @@ const api = {
     }).then(res => {
       const userData = res.data;
       return userData;
-
     })
       .catch(err => {
         console.log('err ', err);
       })
-
   }
 };
 

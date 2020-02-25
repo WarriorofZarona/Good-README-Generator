@@ -44,6 +44,6 @@ Copyright ${data.name}. All Rights Reserved.
 
 
 `;
-}
+};
 
 module.exports = generateMarkdown;
