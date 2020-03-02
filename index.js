@@ -78,7 +78,7 @@ async function init() {
                     pfp: res.avatar_url
                 }
                 const final = markdown(data)
-                writeToFile("README.md", final);
+                writeToFile("./output/README.md", final);
             })
                 .catch(err => {
                     console.log('err ', err);
