@@ -66,7 +66,7 @@ async function init() {
                 {
                     name: res.name,
                     username: answers.username,
-                    url: res.url,
+                    url: res.html_url,
                     title: answers.title,
                     description: answers.description,
                     installation: answers.installation,
