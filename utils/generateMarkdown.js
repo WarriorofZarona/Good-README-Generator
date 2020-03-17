@@ -37,7 +37,7 @@ If you have any questions, please e-mail me at ${data.email}.
 
 # Credits
 
-Github: [${data.username}](${data.url})
+Github: [${data.username}](${data.html_url})
 
 
 Copyright ${data.name}. All Rights Reserved.
